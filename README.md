@@ -167,62 +167,7 @@ The station-specific 90th-percentile thresholds are **statistical labels created
 - scikit-learn
 - Jupyter Notebook / Google Colab
 
-## Getting Started
 
-### 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-cd <your-repository-folder>
-```
-
-### 2. Create and activate a virtual environment (recommended)
-
-```bash
-python -m venv .venv
-```
-
-Windows PowerShell:
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-macOS/Linux:
-
-```bash
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-```
-
-### 4. Add the dataset
-
-Place `CORRECTED_2023_2026_NEPAL_FLOOD_WEATHER_KAGGLE.csv` in the project directory, or update the CSV path in the notebook. The current notebook uses a Google Colab path:
-
-```python
-df = pd.read_csv('/content/CORRECTED_2023_2026_NEPAL_FLOOD_WEATHER_KAGGLE.csv')
-```
-
-For a local run, for example, change it to:
-
-```python
-df = pd.read_csv('CORRECTED_2023_2026_NEPAL_FLOOD_WEATHER_KAGGLE.csv')
-```
-
-Make sure you have permission to redistribute the dataset before committing it to a public repository. If redistribution is not permitted, provide the original dataset link and instructions for obtaining it instead.
-
-### 5. Run the notebook
-
-```bash
-jupyter notebook
-```
-
-Open the project notebook and run the cells in order. The notebook also exports a processed dataset named `nepal_flood_processed.csv` during execution.
 
 ## Suggested Repository Structure
 
@@ -237,7 +182,6 @@ nepal-flood-discharge-prediction/
 
 ## Limitations and Future Improvements
 
-- **No persistence benchmark:** the notebook does not compare the models against a simple forecast in which tomorrow's discharge equals today's discharge. This baseline is important for measuring whether the machine-learning model adds forecasting value.
 - **Pooled metrics:** stations have very different discharge scales, and large flows from stations such as Kusum can strongly affect aggregate metrics. Report station-level metrics to understand performance more fully.
 - **Limited out-of-time evaluation:** results are based on one chronological split; the test period ends on 31 August 2026 and includes only part of the 2026 monsoon season.
 - **High-flow threshold is statistical:** station-specific 90th-percentile labels are not equivalent to official warning thresholds.
@@ -257,10 +201,5 @@ Recommended next steps include a persistence baseline, per-station error metrics
 
 These results are encouraging for an exploratory project, but they do not establish readiness for real-world flood-warning deployment.
 
-## Acknowledgements and Data Source
 
-The notebook's data filename indicates a Nepal flood/weather Kaggle dataset, but an explicit source URL is not included in the notebook. Add the exact dataset URL and attribution here before publishing the repository.
 
-## License
-
-No software or dataset license is specified in the notebook. Choose a suitable repository license before publishing, and verify the dataset's terms separately.
