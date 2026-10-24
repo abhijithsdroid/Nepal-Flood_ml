@@ -15,11 +15,10 @@ The project contains two modelling tasks:
 
 ## Dataset
 
-The notebook loads the CSV file:
+https://www.kaggle.com/datasets/tejal5kunjir/nepal-flood-and-weather-dataset-2023
+2026/data 
 
-`CORRECTED_2023_2026_NEPAL_FLOOD_WEATHER_KAGGLE.csv`
 
-The notebook itself does not record an explicit dataset source URL. Add the original dataset link here before publishing the repository.
 
 ### Dataset summary
 
